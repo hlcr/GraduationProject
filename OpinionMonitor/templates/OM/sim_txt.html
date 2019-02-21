@@ -1,0 +1,108 @@
+{% extends "om/base.html" %}
+{% load static %}
+{% block title %}
+    相似文本
+{% endblock %}
+
+{% block css %}
+       <link rel="stylesheet" type="text/css" href="{% static "OM/css/sim_txt.css"%}">
+{% endblock %}
+
+{% block body %}
+<div style="background: #ffffff; padding-top:10px;">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <p>
+            查找相似文本:
+        </p>
+
+            <textarea class="s_text" name="s_text" rows="20" onblur="if(this.value == ''){this.style.color = '#aca899'; this.value = '请输入匹配文字'; }" onfocus="if(this.value == '请输入匹配文字'){this.value =''; this.style.color = '#000000'; } "style="color:#aca899; width: 100%;">请输入匹配文字</textarea>
+
+    <span id="csrf_token">{% csrf_token %}</span>
+</div>
+    </div>
+        <div class="row" style="padding: 10px 0 10px 0">
+            <div class="col-md-9"></div>
+            <div class="col-md-3 pull-right">
+                <div class="pull-right">
+                    <input id='txt_button' class='button confirm' type="submit" value="提交" />
+                    <input id='clear_button' class='button clear' type="submit" value="清空" />
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="result_text_area">
+
+        </div>
+
+
+        </div>
+</div>
+
+</div>
+
+    {% block template %}
+        {% verbatim %}
+        <script type="text/html" id="result_passage">
+
+
+
+                            <!-- 正文标签开始 -->
+                            <div class="col-md-4">
+ <article class="excerpt excerpt-1">
+
+     <div class="row">
+         <div class="col-md-2">
+             <div class="sim_circle">
+                 {{ratio}}
+             </div>
+         </div>
+         <div class="col-md-10">
+                                <header>
+                            <h2>
+                                <a href="{{url}}" title="{{title}}" target="_blank">
+                                    {{title}}
+                                </a>
+                            </h2>
+                        </header>
+                        <p class="meta">
+                            <time class="time">
+                                <i class="glyphicon glyphicon-time">
+                                </i>
+                                {{pDate}}
+                            </time>
+                            <span class="views">
+                                <i class="glyphicon glyphicon-eye-open">
+                                </i>
+                                {{c_read}}
+                            </span>
+                            <a class="comment" href="#" title="评论" target="_blank">
+                                <i class="glyphicon glyphicon-comment">
+                                </i>
+                                    {{c_reply}}
+                            </a>
+                        </p>
+             </div>
+     </div>
+                        <p class="note">
+                                {{content}}
+                        </p>
+     </article>
+                            </div>
+                            <!-- 正文标签结束 -->
+
+
+</script>
+        {% endverbatim %}
+
+    {% endblock %}
+
+{% endblock %}
+
+{% block js %}
+    <script src="{% static "OM/js/template.js"%}"></script>
+        <script src={% static "om/js/sim_txt.js" %}></script>
+{% endblock %}

@@ -1,0 +1,42 @@
+.circle {
+    width: 100px;
+    height: 100px;  
+    position: absolute;
+    border-radius: 50%;
+    background: #0cc;
+}
+.pie_left, .pie_right {
+    width: 100px; 
+    height: 100px;
+    position: absolute;
+    top: 0;left: 0;
+}
+.left, .right {
+    display: block;
+    width:100px; 
+    height:100px;
+    background:#00aacc;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+}
+.pie_right, .right {
+    clip:rect(0,auto,auto,50px);
+}
+.pie_left, .left {
+    clip:rect(0,50px,auto,0);
+}
+.mask {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    left: 12px;
+    top: 12px;
+    background: #FFF;
+    position: absolute;
+    text-align: center;
+    line-height: 75px;
+    font-size: 16px;
+}

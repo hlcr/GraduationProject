@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+<!-- Page title -->
+<title>Home</title>
+
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Style -->
+<link rel="stylesheet" href={% static "OM/css/theme.css" %}>
+
+
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+<div class="loader"></div>
+</div>
+<!-- /Preloader -->
+
+<!-- Header -->
+<header id="home" class="header">
+
+<!-- Navigation -->
+<nav id="navigation" class="navbar affix">
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<!-- Navigation Header -->
+				<div class="navbar-header">
+
+					<!-- Toggle Button -->
+					<button type="button"
+							class="navbar-toggle collapsed"
+							data-toggle="collapse"
+							data-target="#main-menu"
+							aria-expanded="false"
+							aria-controls="main-menu">
+
+						<span class="sr-only">Toggle Navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+
+					</button>
+					<!-- /Toggle Button -->
+
+					<!-- Brand -->
+					<a href="{% url "OpinionMonitor:index" %}" class="brand">
+
+						<!-- Logo Big -->
+						<img src= {% static "OM/images/logo.png" %} class="logo-big" alt="">
+						<!-- /Logo Big -->
+
+						<!-- Logo Small -->
+						<img src= {% static "OM/images/logo-small.png" %} class="logo-small" alt="">
+						<!-- /Logo Small -->
+
+					</a>
+					<!-- /Brand -->
+
+				</div>
+				<!-- /Navigation Header -->
+
+				<!-- Navigation -->
+				<div id="main-menu" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="">Home</a></li>
+						<li><a href="javascript:window.scrollTo(1500,1500)">About</a></li>
+						<li><a href="javascript:window.scrollTo(1500,1500)">Contact</a></li>
+					</ul>
+				</div>
+				<!-- /Navigation -->
+
+			</div>
+		</div>
+
+	</div>
+</nav>
+<!-- /Navigation -->
+
+</header>
+<!-- /Header -->
+
+<!-- Slider -->
+<div class="slider owl-carousel owl-theme">
+
+	<!-- Slide -->
+	<div class="item mask" style="background: url({% static "OM/images/home.jpg"%}) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+
+		<div class="container height-100p">
+			<div class="row height-100p">
+
+				<div class="col-sm-6 col-md-6 height-100p bounceInLeft wow" data-wow-duration="1.3s" data-wow-delay="0.3s" data-stellar-ratio="0.7">
+					<div class="vertical-middle">
+						<h1 class="text-white">欢迎使用 <span class="text-theme">舆情分析系统</span></h1>
+						<div class="text-white h4">
+							舆情分析是针对一定的社会空间内，围绕中介性社会实践的发生、发展和变化。将民众对社会管理者产生和持有的社会政治态度在网络上表达出来的 意愿集合，并进行一定的分析。
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 col-md-offset-2 height-100p bounceInRight wow" data-wow-duration="1.3s" data-stellar-ratio="0.8">
+					<div class="vertical-middle">
+						<img src= {% static "OM/images/devices.png" %} class="img-responsive" alt="">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- /Slide -->
+
+	<!-- Slide -->
+	<div class="item mask" style="background: url({% static "OM/images/home-02.jpg"%}) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+
+		<div class="container height-100p">
+			<div class="row height-100p">
+
+				<div class="col-sm-6 col-md-6 height-100p bounceInLeft wow" data-wow-duration="1.3s" data-wow-delay="0.3s" data-stellar-ratio="0.7">
+					<div class="vertical-middle">
+						<h1 class="text-white">系统 <span class="text-theme">主要功能</span></h1>
+						<div class="text-white h4">
+							基于杭州19楼论坛数据，提取论坛讨论的热点，对每篇文章进行相应的分析计算。
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 col-md-offset-2 height-100p bounceInRight wow" data-wow-duration="1.3s" data-stellar-ratio="0.8">
+					<div class="vertical-middle">
+						<img src="{% static "OM/images/devices.png" %}" class="img-responsive" alt="">
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- /Slide -->
+
+</div>
+<!-- /Slider -->
+
+<!-- Main -->
+<main class="main-container">
+
+<!-- Section: About -->
+<section id="about" class="section">
+	<div class="container">
+
+		<!-- Section Header -->
+		<div class="row" style="display: none">
+			<div class="col-md-6 col-md-offset-3">
+				<header class="text-center">
+					<h2 class="section-title">About <span class="text-theme">Us</span></h2>
+					<p class="section-subtitle">It is a long established fact that a reader</p>
+				</header>
+			</div>
+		</div>
+		<!-- /Section Header -->
+
+		<div class="row">
+
+			<!-- Feature Block -->
+			<a href="search/?keyword=杭州" class="btn_url">
+			<div class="col-sm-3 feature fadeIn wow" data-wow-duration="1.3s">
+				<span class="glyphicon glyphicon-search icon"></span>
+				<div class="h3 title">舆情查询</div>
+				<p class="description">
+					对特定关键词的舆情进行搜索，准确而丰富的搜索结果让你快速了解并掌握关心话题的最新动态。
+				</p>
+			</div>
+			</a>
+			<!-- /Feature Block -->
+
+			<!-- Feature Block -->
+            <a href="hot/" class="btn_url">
+                <div class="col-sm-3 feature fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                    <span class="glyphicon glyphicon-fire icon"></span>
+                    <div class="h3 title">舆情热点</div>
+                    <p class="description">
+                        通过特定的排序算法，提取论坛数据中最受关注的话题，让你快速掌握当然舆论热点的所在。
+                    </p>
+                </div>
+            </a>
+			<!-- /Feature Block -->
+
+			<!-- Feature Block -->
+            <a href="search/?keyword=%敏感文章%" class="btn_url">
+                <div class="col-sm-3 feature fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                    <span class="glyphicon glyphicon-screenshot icon"></span>
+                    <div class="h3 title">舆情预警</div>
+                    <p class="description">
+                        通过情感分析，敏感词识别，及早发现危机的苗头，对可能产生的现实危机的走向、规模进行判断。
+                    </p>
+                </div>
+            </a>
+			<!-- /Feature Block -->
+			
+			<!-- Feature Block -->
+            <a href="sim_txt" class="btn_url">
+                <div class="col-sm-3 feature fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                    <span class="glyphicon glyphicon-flash icon"></span>
+                    <div class="h3 title">全文匹配</div>
+                    <p class="description">
+                        输入待检索的文章，利用相关文字处理算法，自动分析文章的主要内容，匹配类似文章进行展示。
+                    </p>
+                    <!-- <a href="#" class="btn btn-theme">开始</a> -->
+                </div>
+            </a>
+			<!-- /Feature Block -->
+
+		</div>
+	</div>
+</section>
+
+
+</main>
+<!-- /Main -->
+
+<!-- Footer -->
+<footer class="footer section-small">
+<div class="container">
+	<div class="row">
+
+		<!-- Footer Column -->
+		<div class="col-md-2 col-xs-6 footer-col">
+
+		    <span class="point-icon">
+		        <span class="glyphicon glyphicon-user" aria-hidden="true">
+		        </span>
+		    </span>
+		    <span>
+		        Name: 陈泓历
+		    </span>
+
+		</div>
+		<!-- /Footer Column -->
+
+		<!-- Footer Column -->
+		<div class="col-md-3 col-xs-6 footer-col">
+		    <span class="point-icon">
+		        <span class="glyphicon glyphicon-map-marker" aria-hidden="true">
+		        </span>
+		    </span>
+		    <span>
+		        杭州电子科技大学通信工程学院
+		    </span>
+		</div>
+		<!-- /Footer Column -->
+
+		<!-- Footer Column -->
+		<div class="col-md-3 col-xs-6 footer-col">
+		    <span class="point-icon">
+		        <span class="glyphicon glyphicon-envelope" aria-hidden="true">
+		        </span>
+		    </span>
+		    <span>
+		        <a href="mailto:hongliryan@gmail.com" style="color:white">
+		            hongliryan@gmail.com
+		        </a>
+		    </span>
+
+		</div>
+		<!-- /Footer Column -->
+
+		<!-- Footer Column -->
+		<div class="col-md-3 col-xs-6 footer-col">
+
+		    <span class="point-icon" id="phone_number">
+		        <span class="glyphicon glyphicon-earphone" aria-hidden="true">
+		        </span>
+		    </span>
+		    <span>
+		        Tel: +8615988417835
+		    </span>
+
+		</div>
+		<!-- /Footer Column -->
+
+
+	</div>
+</div>
+</footer>
+<!-- /Footer -->
+
+<!-- Scroll To Top -->
+<div id="scroll-to-top" class="scroll-to-top">
+<i class="icon fa fa-angle-up"></i>
+</div>
+<!-- /Scroll To Top -->
+
+<!-- Modal: Result Message -->
+<div class="modal fade" id="result" role="dialog">
+<div class="modal-dialog">
+	<div class="modal-content">
+
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+				<i class="fa fa-times"></i>
+			</button>
+			<h4 class="modal-title">Sending message</h4>
+		</div>
+
+		<div class="modal-body">
+
+			<div class="result-icon">
+				<div class="icon-border">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" preserveAspectRatio="none">
+						<circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+					</svg>
+					<i class="icon fa fa-check"></i>
+				</div>
+			</div>
+
+			<p class="modal-result h4 text-center"></p>
+		</div>
+
+	</div>
+</div>
+</div>
+<!-- /Modal: Result Message -->
+
+<!-- SCRIPTS -->
+<script src={% static "OM/js/jquery-2.2.0.min.js" %}></script>
+<script src={% static "OM/js/bootstrap.min.js" %}></script>
+<script src={% static "OM/js/owl.carousel.min.js" %}></script>
+<script src={% static "OM/js/jquery.magnific-popup.min.js" %}></script>
+<script src={% static "OM/js/jquery.validate.min.js" %}></script>
+<script src={% static "OM/js/jquery.stellar.min.js" %}></script>
+<script src={% static "OM/js/wow.min.js" %}></script>
+<script src={% static "OM/js/masonry.pkgd.min.js" %}></script>
+<script src={% static "OM/js/jquery.appear.js" %}></script>
+<script src={% static "OM/js/jquery.animateNumber.min.js" %}></script>
+<script src={% static "OM/js/general.js" %}></script>
+<!-- /SCRIPTS -->
+
+
+
+</body>
+</html>

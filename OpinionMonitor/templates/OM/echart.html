@@ -1,0 +1,92 @@
+{% extends "OM/base.html" %}
+{% load static %}
+{% block title %}
+    热点
+{% endblock %}
+{% load static %}
+{% block css %}
+    <!-- 自定义表格CSS -->
+    <link rel="stylesheet" type="text/css" href={% static "OM/css/table.css" %}>
+{% endblock %}
+
+{% block body %}
+    <div style="background: white">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-12" >
+                    <div id="main" style="width: 100%;height:500px; "></div>
+                    <div id = "div1"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" >
+    <!-- 横线 -->
+        <div class="row" >
+            <div class="col-md-12" >
+                        <hr style="height:4px;border:none;border-top:3px solid #E5E5E5;" />
+
+            </div>
+        </div>
+
+        <div class="row" id="table_row">
+            <div class="col-md-4" style="padding-right: 50px">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>关键词
+                                <th>热度
+                        </thead>
+                        <tbody id="data_table1">
+                        </tbody>
+                    </table>
+            </div>
+
+            <div class="col-md-4" style="padding-right: 50px">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>关键词
+                                <th>热度
+                        </thead>
+                        <tbody id="data_table2">
+                        </tbody>
+                    </table>
+            </div>
+
+            <div class="col-md-4">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>关键词
+                                <th>热度
+                        </thead>
+                        <tbody id="data_table3">
+                        </tbody>
+                    </table>
+            </div>
+
+
+        </div>
+
+        <div class="row" >
+            <div class="col-md-12" >
+                <div style="height: 50px"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+    <!-- 引入 ECharts 文件 -->
+    <script src={% static "OM/js/echarts.js" %}></script>
+    <!-- 执行图标代码 -->
+    <script src={% static "OM/js/myechart.js" %}></script>
+    <script src={% static "OM/js/g_table.js" %}></script>
+{% endblock %}
+
+
+
